@@ -6,9 +6,9 @@ from pathlib import Path
 
 try:
     image_location = eg.fileopenbox(title="Open Image file")
-    input = Image.open(image_location)
+    Open_image = Image.open(image_location)
     input_path = os.path.abspath(image_location)
-    rgb_im = input.convert('RGB')
+    rgb_im = Open_image.convert('RGB')
     new_file = os.path.basename(input_path)
     new_file = os.path.splitext(new_file)[0]
     output = remove(rgb_im)
